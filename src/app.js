@@ -4,18 +4,17 @@ import "./style.css";
 
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
-import { bottom } from "@popperjs/core";
-
+//
+//
 window.onload = function() {
   console.log("everything starts with a Hello World :)");
-  /*  document.querySelector(".topLeftSuit").innerHTML = suitGenerator() */
   document.querySelector(".middleNumber").innerHTML =
     middleNumber[randomCardNum];
   suitGenerator();
 };
 let middleNumber = [2, 3, 4, 5, 6, 7, 8, 9, 10, "K", "Q", "J", "A"];
 let randomCardNum = Math.floor(Math.random() * 13);
-/* */
+//
 let suit = ["&#9830", "&#9829", "&#9824", "&#9827"];
 let suitNum = Math.floor(Math.random() * 4);
 var topLeft = document.querySelector(".topLeftSuit");
