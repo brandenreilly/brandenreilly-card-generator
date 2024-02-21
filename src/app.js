@@ -7,13 +7,10 @@ import "./assets/img/4geeks.ico";
 //
 //
 window.onload = function() {
-  console.log("everything starts with a Hello World :)");
   document.querySelector(".middleNumber").innerHTML =
     middleNumber[randomCardNum];
   suitGenerator();
 };
-const newCard = document.querySelector(".newCard");
-newCard.addEventListener("click", suitGenerator); // This isn't working, find out why.
 //
 let middleNumber = [2, 3, 4, 5, 6, 7, 8, 9, 10, "K", "Q", "J", "A"];
 let randomCardNum = Math.floor(Math.random() * 13);
@@ -22,7 +19,7 @@ let suit = ["&#9830", "&#9829", "&#9824", "&#9827"];
 let suitNum = Math.floor(Math.random() * 4);
 var topLeft = document.querySelector(".topLeftSuit");
 var bottomRight = document.querySelector(".bottomRightSuit");
-
+//
 let suitGenerator = () => {
   if (suitNum == 0) {
     topLeft.innerHTML = suit[suitNum];
@@ -46,3 +43,7 @@ let suitGenerator = () => {
     bottomRight.style.color = "black";
   }
 };
+//
+const newCard = document.querySelector(".newCard");
+newCard.addEventListener("click", suitGenerator);
+//
