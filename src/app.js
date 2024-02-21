@@ -12,6 +12,9 @@ window.onload = function() {
     middleNumber[randomCardNum];
   suitGenerator();
 };
+const newCard = document.querySelector(".newCard");
+newCard.addEventListener("click", suitGenerator); // This isn't working, find out why.
+//
 let middleNumber = [2, 3, 4, 5, 6, 7, 8, 9, 10, "K", "Q", "J", "A"];
 let randomCardNum = Math.floor(Math.random() * 13);
 //
